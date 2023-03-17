@@ -105,7 +105,9 @@ public class MainActivity extends AppCompatActivity{
                             }
 
                             Log.d("Appwrite", result.toString());
-                            Toast.makeText(MainActivity.this, "Successfully signed up!", Toast.LENGTH_SHORT).show();
+                            runOnUiThread(() -> {
+                                Toast.makeText(MainActivity.this, "Successfully signed up!", Toast.LENGTH_SHORT).show();
+                            });
                         })
 
                 );
@@ -144,7 +146,7 @@ public class MainActivity extends AppCompatActivity{
                         Log.d("Appwrite", result.toString());
                         runOnUiThread(() -> Toast.makeText(MainActivity.this, "Successfully signed in!", Toast.LENGTH_SHORT).show());
                         // Start ExploreActivity
-                        Intent intent = new Intent(MainActivity.this, ExploreActivity.class);
+                        Intent intent = new Intent(MainActivity.this, ThingstodoActivity.class);
                         startActivity(intent);
                     })
             );

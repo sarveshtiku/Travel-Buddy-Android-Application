@@ -13,8 +13,8 @@ public class AppwriteClientManager {
 
     public static void initialize(Context context) {
         client = new Client(context);
-        client.setEndpoint("http://192.168.1.143/v1")
-                .setProject("64109c0996b5267a8c7e")
+        client.setEndpoint("http://10.0.2.2/v1")
+                .setProject("64136f06c970db619408")
                 .setSelfSigned(true); // For self-signed certificates, only use for development
         account = new Account(client);
     }
