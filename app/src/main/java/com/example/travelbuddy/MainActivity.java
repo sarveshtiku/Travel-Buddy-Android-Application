@@ -32,10 +32,6 @@ import io.appwrite.coroutines.CoroutineCallback;
 import io.appwrite.services.Account;
 
 
-
-
-
-
 public class MainActivity extends AppCompatActivity{
     public static MainActivity instance;
 
