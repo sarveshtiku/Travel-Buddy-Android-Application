@@ -1,5 +1,6 @@
 package com.example.travelbuddy;
 
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -86,7 +87,12 @@ public class ThingstodoActivity extends AppCompatActivity {
         ThingsToDoCategoryAdapter adapter = new ThingsToDoCategoryAdapter(categories, new ThingsToDoCategoryAdapter.OnCategoryClickListener() {
             @Override
             public void onCategoryClick(int position) {
-                            }
+                String selectedCategory = categories.get(position);
+                Intent intent = new Intent(ThingstodoActivity.this, MapRecommendationActivity.class);
+                intent.putExtra("category", selectedCategory);
+                ThingstodoActivity.this.startActivity(intent);
+            }
+
         });
         recyclerView.setAdapter(adapter);}
 
