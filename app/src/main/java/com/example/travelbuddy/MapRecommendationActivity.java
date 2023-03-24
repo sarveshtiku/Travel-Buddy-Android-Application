@@ -1,13 +1,17 @@
 package com.example.travelbuddy;
 
 import static android.content.ContentValues.TAG;
+import com.example.travelbuddy.CustomInfoWindowAdapter;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 import android.content.pm.ApplicationInfo;
 
@@ -24,65 +28,21 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.OnCompleteListener;
+
 import com.google.android.gms.tasks.Task;
 
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.Task;
-import com.google.android.libraries.places.api.Places;
-import com.google.android.libraries.places.api.model.Place;
-import com.google.android.libraries.places.api.model.PlaceLikelihood;
 import com.google.android.libraries.places.api.model.RectangularBounds;
 import com.google.android.libraries.places.api.model.TypeFilter;
-import com.google.android.libraries.places.api.net.FindCurrentPlaceRequest;
-import com.google.android.libraries.places.api.net.FindCurrentPlaceResponse;
-
-import android.Manifest;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.Location;
-import android.os.Bundle;
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.FragmentActivity;
-
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.Task;
-import com.google.android.libraries.places.api.model.Place;
-import com.google.android.libraries.places.api.model.PlaceLikelihood;
-import com.google.android.libraries.places.api.model.RectangularBounds;
-import com.google.android.libraries.places.api.model.TypeFilter;
-import com.google.android.libraries.places.api.net.FindCurrentPlaceRequest;
-import com.google.android.libraries.places.api.net.FindCurrentPlaceResponse;
 import com.google.android.libraries.places.api.net.PlacesClient;
-import com.google.maps.android.PolyUtil;
-import com.google.maps.android.SphericalUtil;
-//import com.google.android.libraries.places.api.model.FindCurrentPlaceRequest;
-import com.google.android.libraries.places.api.model.Place;
-import com.google.android.libraries.places.api.model.Place.Field;
-import com.google.android.libraries.places.api.model.RectangularBounds;
-import com.google.android.libraries.places.api.model.TypeFilter;
-import com.google.android.libraries.places.api.model.LocationBias;
-import com.google.android.libraries.places.api.model.LocationRestriction;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
@@ -95,6 +55,7 @@ public class MapRecommendationActivity extends FragmentActivity implements OnMap
 
     private GoogleMap mMap;
     private String category;
+    CustomInfoWindowAdapter customInfoWindowAdapter;
     PlacesClient placesClient;
 
     RectangularBounds bounds;
@@ -111,16 +72,53 @@ public class MapRecommendationActivity extends FragmentActivity implements OnMap
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        assert mapFragment != null;
         mapFragment.getMapAsync(this);
     }
 
+    @SuppressLint("PotentialBehaviorOverride")
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
         requestLocationPermissions();
-        // Use the Places API to search for nearby places based on the selected category
-        // and add markers to the map
+
+        assert mMap != null;
+        customInfoWindowAdapter = new CustomInfoWindowAdapter(this);
+        mMap.setInfoWindowAdapter(customInfoWindowAdapter);
+
+        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+            @Override
+            public void onInfoWindowClick(Marker marker) {
+                // Do nothing since we will handle button clicks separately
+            }
+        });
+
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                marker.showInfoWindow();
+                Button addToTripButton = customInfoWindowAdapter.getAddToTripButton();
+
+                if (addToTripButton != null) {
+                    addToTripButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if (!marker.getTitle().equals("You are here")) {
+                                addToMyTrips(new TripPlace(marker.getTitle(), marker.getSnippet(), marker.getPosition()));
+                            }
+                        }
+                    });
+                }
+
+                return true;
+            }
+        });
     }
+    private void addToMyTrips(TripPlace tripPlace) {
+        // Your implementation to save the tripPlace to the user's trips
+        Toast.makeText(this, "Added " + tripPlace.getName() + " to your trip", Toast.LENGTH_SHORT).show();
+    }
+
 
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
 
@@ -190,7 +188,7 @@ public class MapRecommendationActivity extends FragmentActivity implements OnMap
         String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
                 currentLatLng.latitude + "," + currentLatLng.longitude +
                 "&radius=" + radiusInMeters +
-                "&type=" + category.toUpperCase() +
+                "&type=" + category +
                 "&key=" + apiKey;
 
         OkHttpClient client = new OkHttpClient();

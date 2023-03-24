@@ -3,6 +3,7 @@ package com.example.travelbuddy;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -50,6 +51,8 @@ public class ThingsToDoCategoryAdapter extends RecyclerView.Adapter<ThingsToDoCa
             this.onCategoryClickListener = onCategoryClickListener;
             itemView.setOnClickListener(this);
         }
+
+
 
         @Override
         public void onClick(View v) {
