@@ -27,6 +27,9 @@ Travel Buddy is an Android application designed to help users explore new places
 - **Backend Services:** Acquired experience in backend services using Appwrite for secure data management.
 - **Client Collaboration:** Enhanced ability to collaborate with clients and incorporate feedback into the development process.
 
+## Documents
+- **Criterions A through E:** Uploaded all documents to docs folder above.
+
 ## Screenshots
 
 <img width="378" alt="Screenshot 2024-08-20 at 3 21 58 PM" src="https://github.com/user-attachments/assets/06e62796-7028-4d69-9815-71d877ae75fd">
