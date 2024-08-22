@@ -30,14 +30,6 @@ Travel Buddy is an Android application designed to help users explore new places
 ## Documents
 - **Criterions A through E:** Uploaded all documents to docs folder above.
 
-## Screenshots
-![Front_Login](https://github.com/user-attachments/assets/314d830c-5f64-48d1-a22a-156beaaa3d74)
-![List](https://github.com/user-attachments/assets/e91b0d54-b19f-400f-b757-0b65556643b5)
-![AddToList](https://github.com/user-attachments/assets/32b0ceb7-7487-4ec3-9c90-eebe66b04688)
-![Sucess_List](https://github.com/user-attachments/assets/c5131b9b-d00b-40c9-b889-b2a27783a76e)
-![Working Page](https://github.com/user-attachments/assets/d36422e2-f998-45f4-a099-5d8b380d447c)
-
-
 
 
 
