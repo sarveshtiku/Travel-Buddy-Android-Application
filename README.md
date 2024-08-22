@@ -31,11 +31,17 @@ Travel Buddy is an Android application designed to help users explore new places
 - **Criterions A through E:** Uploaded all documents to docs folder above.
 
 ## Screenshots
+![Front_Login](https://github.com/user-attachments/assets/314d830c-5f64-48d1-a22a-156beaaa3d74)
+![List](https://github.com/user-attachments/assets/e91b0d54-b19f-400f-b757-0b65556643b5)
+![AddToList](https://github.com/user-attachments/assets/32b0ceb7-7487-4ec3-9c90-eebe66b04688)
+![Sucess_List](https://github.com/user-attachments/assets/c5131b9b-d00b-40c9-b889-b2a27783a76e)
+![Working Page](https://github.com/user-attachments/assets/d36422e2-f998-45f4-a099-5d8b380d447c)
 
-<img width="378" alt="Screenshot 2024-08-20 at 3 21 58 PM" src="https://github.com/user-attachments/assets/06e62796-7028-4d69-9815-71d877ae75fd">
-<img width="382" alt="Screenshot 2024-08-20 at 3 22 34 PM" src="https://github.com/user-attachments/assets/e7271ac5-4425-42c1-952d-46a3247757e9"><img width="381" alt="Screenshot 2024-08-20 at 3 23 09 PM" src="https://github.com/user-attachments/assets/a012da89-8b76-45d1-a039-fd53d77a65a2">
-<img width="333" alt="Screenshot 2024-08-20 at 3 24 32 PM" src="https://github.com/user-attachments/assets/9fdec6bf-6e67-4bd3-8e9e-fcbfc0395bc9">
-<img width="328" alt="Screenshot 2024-08-20 at 3 24 07 PM" src="https://github.com/user-attachments/assets/099bb6cd-7859-48d0-9d3a-43f7c80f8ed8">
+
+
+
+
+
 
 
 
