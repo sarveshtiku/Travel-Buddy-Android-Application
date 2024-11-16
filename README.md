@@ -49,8 +49,9 @@
 ---
 
 ## 📸 **Screenshots**
-<img src="https://github.com/user-attachments/assets/32329595-2ff0-4102-98c4-fae41e2ee474" alt="App Screenshot" width="500px">
-
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/32329595-2ff0-4102-98c4-fae41e2ee474" alt="App Screenshot" width="500px">
+</div>
 ---
 
 ## 🛠️ **Tech Stack**
