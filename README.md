@@ -4,7 +4,7 @@
 ![Platform](https://img.shields.io/badge/Platform-Android-green?style=for-the-badge&logo=android&logoColor=white)  
 ![Tech Stack](https://img.shields.io/badge/Tech%20Stack-Java%20|%20Appwrite%20|%20Google%20Maps%20API-orange?style=for-the-badge)
 
----
+
 
 ## **Overview**
 
@@ -14,7 +14,7 @@
 ✔️ Get personalized recommendations  
 ✔️ Save and manage favorite destinations  
 
----
+
 
 ## ✨ **Key Features**
 
@@ -33,7 +33,7 @@
 - **Comprehensive Testing**: Ensured smooth functionality for features like user authentication and location accuracy.  
 - **Client Feedback**: Iteratively refined the product for performance and usability.
 
----
+
 
 ## 📈 **Skills Gained**
 
@@ -41,12 +41,12 @@
 - **Backend Services**: Expertise in using **Appwrite** for secure and scalable backend solutions.  
 - **Client Collaboration**: Strengthened communication and adaptability in response to client input.
 
----
+
 
 ## 📂 **Documents**  
 📄 All supporting documents (**Criterions A through E**) are available in the [docs folder](./docs).
 
----
+
 
 ## 📸 **Screenshots**
 <div align="center">
@@ -59,4 +59,3 @@
 - **APIs**: Google Maps API, Google Places API  
 - **Backend**: Appwrite Database  
 
----
