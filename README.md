@@ -51,4 +51,6 @@
 ## **Screenshots**
 <div align="center">
     <img src="https://github.com/user-attachments/assets/32329595-2ff0-4102-98c4-fae41e2ee474" alt="App Screenshot" width="500px">
+    <img width="526" alt="Screenshot 2025-06-13 at 15 42 23" src="https://github.com/user-attachments/assets/55799a5a-b755-46ca-89ed-5cfebddaedc7" />
+
 </div>
