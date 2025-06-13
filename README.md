@@ -6,7 +6,7 @@
 
 ---
 
-## 🚀 **Overview**
+## **Overview**
 
 **Travel Buddy** is an Android application designed to help users:  
 ✔️ Explore new places effortlessly  
