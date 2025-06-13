@@ -16,26 +16,26 @@
 
 
 
-## ✨ **Key Features**
+## **Key Features**
 
-### 🛠️ **Problem Solving**
+### **Problem Solving**
 - **User Need Identification**: Addressed the demand for a user-friendly tool for exploring and organizing travel plans.  
 - **Client Collaboration**: Partnered with stakeholders to ensure the app met requirements.
 
-### 💻 **Technical Implementation**
+### **Technical Implementation**
 - **Android Development**: Built a responsive app in **Android Studio** for an intuitive user experience.  
 - **RecyclerView Integration**: Displayed dynamic lists (e.g., saved places) for seamless navigation.  
 - **JSON Parsing**: Dynamically populated user content using **Appwrite API**.  
 - **Google Maps Integration**: Provided location-based services via **Google Maps & Places API**.  
 - **Secure Data Management**: Enabled authentication, personalized lists, and more using **Appwrite Database**.
 
-### 🔍 **Testing & Iteration**
+### **Testing & Iteration**
 - **Comprehensive Testing**: Ensured smooth functionality for features like user authentication and location accuracy.  
 - **Client Feedback**: Iteratively refined the product for performance and usability.
 
 
 
-## 📈 **Skills Gained**
+## **Skills Gained**
 
 - **Android Development**: Mastery in RecyclerView, JSON parsing, and API integration.  
 - **Backend Services**: Expertise in using **Appwrite** for secure and scalable backend solutions.  
@@ -43,18 +43,18 @@
 
 
 
-## 📂 **Documents**  
+## **Documents**  
 📄 All supporting documents (**Criterions A through E**) are available in the [docs folder](./docs).
 
 
 
-## 📸 **Screenshots**
+## **Screenshots**
 <div align="center">
     <img src="https://github.com/user-attachments/assets/32329595-2ff0-4102-98c4-fae41e2ee474" alt="App Screenshot" width="500px">
 </div>
 
 
-## 🛠️ **Tech Stack**
+## **Tech Stack**
 - **Languages**: Java  
 - **APIs**: Google Maps API, Google Places API  
 - **Backend**: Appwrite Database  
