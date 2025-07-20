@@ -59,6 +59,19 @@ Built with travelers in mind, it combines a smooth mobile experience with real-t
 ## **Documents**  
 📄 All supporting documents (**Criterions A through E**) are available in the [docs folder](./docs).
 
+## 📄 Documentation Table
+
+| File Name                          | Path & Link |
+|-----------------------------------|-------------|
+| Appendix 1 - Code Draft           | [docs/Appendix_1_Code_Draft_1.pdf](https://github.com/sarveshtiku/Travel-Buddy-Android-Application/blob/main/docs/Appendix_1_Code_Draft_1.pdf) |
+| Appendix 2 - Final Code           | [docs/Appendix_2_Final_Code.pdf](https://github.com/sarveshtiku/Travel-Buddy-Android-Application/blob/main/docs/Appendix_2_Final_Code.pdf) |
+| Appendix 3 - Client Consultations | [docs/Appendix_3_Client_Consultations.pdf](https://github.com/sarveshtiku/Travel-Buddy-Android-Application/blob/main/docs/Appendix_3_Client_Consultations.pdf) |
+| Criterion A - Planning            | [docs/Criterion_A_Planning.pdf](https://github.com/sarveshtiku/Travel-Buddy-Android-Application/blob/main/docs/Criterion_A_Planning.pdf) |
+| Criterion B - Design              | [docs/Criterion_B_Design.pdf](https://github.com/sarveshtiku/Travel-Buddy-Android-Application/blob/main/docs/Criterion_B_Design.pdf) |
+| Criterion C - Development         | [docs/Criterion_C_Development.pdf](https://github.com/sarveshtiku/Travel-Buddy-Android-Application/blob/main/docs/Criterion_C_Development.pdf) |
+| Criterion E - Evaluation          | [docs/Criterion_E_Evaluation.pdf](https://github.com/sarveshtiku/Travel-Buddy-Android-Application/blob/main/docs/Criterion_E_Evaluation.pdf) |
+| UML Class Diagrams (Design)       | [docs/UML_Class_Diagrams_Design.pdf](https://github.com/sarveshtiku/Travel-Buddy-Android-Application/blob/main/docs/UML_Class_Diagrams_Design.pdf) |
+
 ---
 
 ## **Screenshots**
