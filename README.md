@@ -48,6 +48,11 @@ Built with travelers in mind, it combines a smooth mobile experience with real-t
 - **Tools**: Android Studio, Postman
 
 ---
+## 👀 Try It Out
+
+🎥 Watch the demo: [Travel Buddy Demo (Google Drive)](https://drive.google.com/file/d/1ldB_73UGCHlmKnRBEEyY7yQgRVem_mmq/view)
+
+---
 
 ## 📚 Skills Developed
 
