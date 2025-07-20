@@ -59,7 +59,6 @@ Built with travelers in mind, it combines a smooth mobile experience with real-t
 ## **Documents**  
 📄 All supporting documents (**Criterions A through E**) are available in the [docs folder](./docs).
 
-## 📄 Documentation Table
 
 | File Name                          | Path & Link |
 |-----------------------------------|-------------|
